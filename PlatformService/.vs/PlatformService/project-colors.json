@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9ab75c29-747d-4b0b-8811-7a30d0a9d63c": {
+      "ProjectGuid": "9ab75c29-747d-4b0b-8811-7a30d0a9d63c",
+      "DisplayName": "PlatformService",
+      "ColorIndex": 0
+    },
+    "bcaf767f-ac32-4eee-96c9-ebc458811355": {
+      "ProjectGuid": "bcaf767f-ac32-4eee-96c9-ebc458811355",
+      "DisplayName": "K85",
+      "ColorIndex": 1
+    },
+    "d15f0e9c-c1da-460b-a316-aab21510e8dd": {
+      "ProjectGuid": "d15f0e9c-c1da-460b-a316-aab21510e8dd",
+      "DisplayName": "k85",
+      "ColorIndex": 2
+    },
+    "1f273b9f-b9b7-429b-a8de-fa95f995e556": {
+      "ProjectGuid": "1f273b9f-b9b7-429b-a8de-fa95f995e556",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 3
+    },
+    "05ebbd1e-211c-4af4-8e48-c7a4a4f5ee0c": {
+      "ProjectGuid": "05ebbd1e-211c-4af4-8e48-c7a4a4f5ee0c",
+      "DisplayName": "CommandsService",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

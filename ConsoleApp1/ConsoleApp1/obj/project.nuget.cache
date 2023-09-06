@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yQr0r8C1Gt0Lwg2mnxxyA/7ui+B31G/bas90Erld2eldROt3VKq56BNyX0fjojzcn1i/5oSDFJ95DbZkVYT3PA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vira66452172\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vira66452172\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

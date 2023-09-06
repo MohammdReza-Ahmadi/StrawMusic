@@ -1,0 +1,12 @@
+C:\Users\vira66452172\source\repos\store\sore.Domin\bin\Debug\net5.0\sore.Domin.deps.json
+C:\Users\vira66452172\source\repos\store\sore.Domin\bin\Debug\net5.0\sore.Domin.dll
+C:\Users\vira66452172\source\repos\store\sore.Domin\bin\Debug\net5.0\ref\sore.Domin.dll
+C:\Users\vira66452172\source\repos\store\sore.Domin\bin\Debug\net5.0\sore.Domin.pdb
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.csproj.AssemblyReference.cache
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.AssemblyInfoInputs.cache
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.AssemblyInfo.cs
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.csproj.CoreCompileInputs.cache
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.dll
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\ref\sore.Domin.dll
+C:\Users\vira66452172\source\repos\store\sore.Domin\obj\Debug\net5.0\sore.Domin.pdb

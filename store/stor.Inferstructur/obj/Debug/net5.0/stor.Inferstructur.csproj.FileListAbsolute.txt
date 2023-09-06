@@ -1,0 +1,11 @@
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\bin\Debug\net5.0\stor.Inferstructur.deps.json
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\bin\Debug\net5.0\stor.Inferstructur.dll
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\bin\Debug\net5.0\ref\stor.Inferstructur.dll
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\bin\Debug\net5.0\stor.Inferstructur.pdb
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.AssemblyInfoInputs.cache
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.AssemblyInfo.cs
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.csproj.CoreCompileInputs.cache
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.dll
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\ref\stor.Inferstructur.dll
+C:\Users\vira66452172\source\repos\store\stor.Inferstructur\obj\Debug\net5.0\stor.Inferstructur.pdb
