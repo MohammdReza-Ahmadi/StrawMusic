@@ -25,6 +25,11 @@
       "ProjectGuid": "05ebbd1e-211c-4af4-8e48-c7a4a4f5ee0c",
       "DisplayName": "CommandsService",
       "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 5

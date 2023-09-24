@@ -734,27 +734,6 @@
             "rid": "win"
           }
         }
-      },
-      "PlatformService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.InMemory": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
-          "Swashbuckle.AspNetCore": "6.2.3"
-        },
-        "compile": {
-          "bin/placeholder/PlatformService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PlatformService.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -2198,11 +2177,6 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "PlatformService/1.0.0": {
-      "type": "project",
-      "path": "../PlatformService/PlatformService.csproj",
-      "msbuildProject": "../PlatformService/PlatformService.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2213,7 +2187,6 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
-      "PlatformService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2243,11 +2216,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\mr.ahmadi\\source\\repos\\PlatformService\\PlatformService\\PlatformService.csproj": {
-              "projectPath": "C:\\Users\\mr.ahmadi\\source\\repos\\PlatformService\\PlatformService\\PlatformService.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
