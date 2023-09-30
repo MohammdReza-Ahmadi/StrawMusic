@@ -1,4 +1,4 @@
-namespace Helios.Contracts.Autentication;
+namespace Helios.Contracts.Authentication;
 public record RegisterRequest(
     string FirstName,
     string LastName,

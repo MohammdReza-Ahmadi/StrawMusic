@@ -1,10 +1,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Helios.Application.Common.Interfaces.Autentication;
+using Helios.Application.Common.Interfaces.Authentication;
 using Helios.Domain.User;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Helios.Infrastructure.Autentication;
+namespace Helios.Infrastructure.Authentication;
 
 public class JwtTokenGenerator : IJwtTokenGenerator
 {

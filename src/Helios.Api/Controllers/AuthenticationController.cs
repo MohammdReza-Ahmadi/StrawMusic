@@ -1,11 +1,11 @@
-using Helios.Contracts.Autentication;
+using Helios.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helios.Api.Controller;
 
 [ApiController]
 [Route("auth")]
-public class AutenticationController: ControllerBase
+public class AuthenticationController: ControllerBase
 {
 
 

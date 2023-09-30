@@ -1,6 +1,6 @@
 using Helios.Domain.User;
 
-namespace Helios.Application.Common.Interfaces.Autentication;
+namespace Helios.Application.Common.Interfaces.Authentication;
 
 public interface IJwtTokenGenerator
 {
