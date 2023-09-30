@@ -7,15 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Application", "Helio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Inferstructure", "Helios.Inferstructure\Helios.Inferstructure.csproj", "{4B86369E-543F-4813-93A4-A882F782B96A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Core", "Helios.Core\Helios.Core.csproj", "{62B71DD0-8EAF-4A22-B787-6B1AA4603773}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Domain", "Helios.Domain\Helios.Domain.csproj", "{62B71DD0-8EAF-4A22-B787-6B1AA4603773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios", "Helios\Helios.csproj", "{DBC71582-B1C0-4DB9-A367-B310243830F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Api", "Helios.Api\Helios.Api.csproj", "{DBC71582-B1C0-4DB9-A367-B310243830F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A7EB35FE-2F51-4BE7-A79E-7B708ACDBF53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{9D61051A-4AAE-4509-83EB-A1FB2EA86041}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelios", "TestHelios\TestHelios.csproj", "{CD67EFEB-B8E0-449B-A58B-A3D1C37183C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helios.Api", "Helios.Api\Helios.Api.csproj", "{02F15934-B20F-4F23-A33E-CF46E7214AF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{CD67EFEB-B8E0-449B-A58B-A3D1C37183C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD67EFEB-B8E0-449B-A58B-A3D1C37183C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD67EFEB-B8E0-449B-A58B-A3D1C37183C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F15934-B20F-4F23-A33E-CF46E7214AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F15934-B20F-4F23-A33E-CF46E7214AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F15934-B20F-4F23-A33E-CF46E7214AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F15934-B20F-4F23-A33E-CF46E7214AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
