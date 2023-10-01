@@ -1,17 +1,19 @@
+using Helios.Application;
+using Helios.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 {
+builder.Services.AddApplication()
+.AddInfrastructure(builder.Configuration);
+
     builder.Services.AddControllers();
-    builder.Services.AddEndpointsApiExplorer();
 }
 
 
 var app = builder.Build();
 {
     app.UseHttpsRedirection();
-
-    app.UseAuthorization();
-
     app.MapControllers();
-
     app.Run();
 }
+
+

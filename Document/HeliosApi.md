@@ -37,10 +37,11 @@ POST {{host}}/auth/register
 
 ```json
 {
-    "firstname":"mohhamdreza",
-    "lastName":"ahmadi",
-    "email":"mohammadre3aahmadi@gmail.com",
-    "password":"Amiko123456"
+  "id": "1755a811-2f0a-4172-a497-bdfc9aad3d2f",
+  "firstName": "Mohammad reza",
+  "lastName": "ahmadi",
+  "email": "manv.ma123@gmail.com",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNzU1YTgxMS0yZjBhLTQxNzItYTQ5Ny1iZGZjOWFhZDNkMmYiLCJnaXZlbl9uYW1lIjoiTW9oYW1tYWQgcmV6YSIsImZhbWlseV9uYW1lIjoiYWhtYWRpIiwianRpIjoiYzU3MDQ3OTgtNjJjMy00Y2Q3LTg0ZjktOWM0NTI4ZWExZTg0IiwiZXhwIjoxNjk2MTk3MTU2LCJpc3MiOiJIZWxpb3MiLCJhdWQiOiJIZWxpb3MifQ.8H0FOc9R3Q4GZNOM2LbslkNJ6Mrdok_byD4I5lnaxso"
 }
 ```
 
@@ -65,10 +66,11 @@ POST {{host}}/auth/login
 
 ```json
 {
-    "firstname":"mohhamdreza",
-    "lastName":"ahmadi",
-    "email":"mohammadre3aahmadi@gmail.com",
-    "password":"Amiko123456"
+  "id": "eaf07526-003a-432a-af1e-219f62a7cddb",
+  "firstName": "Mohammad reza",
+  "lastName": "ahmadi",
+  "email": "manv.ma123@gmail.com",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYWYwNzUyNi0wMDNhLTQzMmEtYWYxZS0yMTlmNjJhN2NkZGIiLCJnaXZlbl9uYW1lIjoiTW9oYW1tYWQgcmV6YSIsImZhbWlseV9uYW1lIjoiYWhtYWRpIiwianRpIjoiODU3ZjdkODYtNzQwMS00MjgzLTllYjctYjk5YTJkZDU4ZDI0IiwiZXhwIjoxNjk2MTk3MjM5LCJpc3MiOiJIZWxpb3MiLCJhdWQiOiJIZWxpb3MifQ.hV1E2j_GKt5eIvqnALSrBU-qOUrHFkytE8uqMKueBCg"
 }
 ```
 

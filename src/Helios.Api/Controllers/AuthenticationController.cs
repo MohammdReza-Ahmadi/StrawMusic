@@ -1,4 +1,6 @@
+using Helios.Application.Services.Authentication;
 using Helios.Contracts.Authentication;
+using Helios.Domain.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helios.Api.Controller;
@@ -8,18 +10,44 @@ namespace Helios.Api.Controller;
 public class AuthenticationController: ControllerBase
 {
 
-
+    private readonly IAuthenticationService _authenticationService;
+    public AuthenticationController(IAuthenticationService authenticationService)
+    {
+        _authenticationService = authenticationService;
+    }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest registerRequest)
+    public IActionResult Register(RegisterRequest request)
     {
-        return Ok(registerRequest);
+        var authResult = _authenticationService.Register(
+            request.FirstName,
+            request.LastName,
+            request.Email,
+            request.Password);
+
+        var response = new AuthenticationResponse(
+            authResult.User.Id,
+            authResult.User.FirstName,
+            authResult.User.LastName,
+            authResult.User.Email,
+            authResult.Token
+        );
+        return Ok(response);
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest loginRequest)
+    public IActionResult Login(LoginRequest request)
     {
-        return Ok(loginRequest);
+        var authResult = _authenticationService.Login(request.Email,request.Password);
+
+        var response = new AuthenticationResponse(
+            authResult.User.Id,
+            authResult.User.FirstName,
+            authResult.User.LastName,
+            authResult.User.Email,
+            authResult.Token
+        );
+        return Ok(response);
     }
     
 }

@@ -4,7 +4,7 @@ using Helios.Domain.User;
 
 namespace Helios.Application.Services.Authentication;
 
-public class AuthenticationService : IAutenticatinService
+public class AuthenticationService : IAuthenticationService
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepsitory _userRepsitory;
