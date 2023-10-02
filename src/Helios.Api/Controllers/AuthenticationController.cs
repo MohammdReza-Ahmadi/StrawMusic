@@ -1,6 +1,6 @@
+using Helios.Api.Filters;
 using Helios.Application.Services.Authentication;
 using Helios.Contracts.Authentication;
-using Helios.Domain.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helios.Api.Controller;
