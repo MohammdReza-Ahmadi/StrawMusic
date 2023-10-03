@@ -1,3 +1,5 @@
+using FluentResults;
+using Helios.Application.Common.Errors;
 using Helios.Application.Common.Interfaces.Authentication;
 using Helios.Application.Common.Interfaces.Persistence;
 using Helios.Domain.User;
@@ -32,11 +34,12 @@ public class AuthenticationService : IAuthenticationService
 
     }
 
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password)
+    public Result<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
     {
         if(_userRepsitory.GetUserByEmail(email) is not null)
         {
-            throw new Exception("User with given email already exists.");
+            //throw new Exception("User with given email already exists.");
+            return Result.Fail<AuthenticationResult>(new[] {new DuplicateEmailError() });
         }
 
       var user = new User{

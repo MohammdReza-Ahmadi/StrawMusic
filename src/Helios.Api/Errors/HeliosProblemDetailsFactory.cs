@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -5,30 +6,62 @@ using Microsoft.Extensions.Options;
 
 namespace Helios.Api.Errors;
 
-// public class HeliosProblemDetailsFactory : ProblemDetailsFactory
-// {
-//     private readonly ApiBehaviorOptions _options;
+public class HeliosProblemDetailsFactory : ProblemDetailsFactory
+{
+    private readonly ApiBehaviorOptions _options;
 
-//     public HeliosProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
-//     {
-//         _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-//     }
+    public HeliosProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
+    {
+        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
+    }
 
-//     // public override ProblemDetails CreateProblemDetails(HttpContext httpContext, int? statusCode = null, string? title = null, string? type = null, string? detail = null, string? instance = null)
-//     // {
-//     //    statusCode ??=500;
+    public override ProblemDetails CreateProblemDetails(
+        HttpContext httpContext,
+        int? statusCode = null,
+        string? title = null,
+        string? type = null,
+        string? detail = null,
+        string? instance = null)
+    {
+       statusCode ??=500;
 
-//     //    var ProblemDetails = new ProblemDetails
-//     //    {
-//     //     Status = statusCode,
-//     //     Title = title,
+       var ProblemDetails = new ProblemDetails
+       {
+        Status = statusCode,
+        Title = title,
+        Type = type,
+        Detail = detail,
+        Instance = instance,
+       };
 
+       ApplyProblemDetailsDefaults(httpContext,ProblemDetails, statusCode.Value);
 
-//     //    }
-//     // }
+       return ProblemDetails;
+    }
 
-//     public override ValidationProblemDetails CreateValidationProblemDetails(HttpContext httpContext, ModelStateDictionary modelStateDictionary, int? statusCode = null, string? title = null, string? type = null, string? detail = null, string? instance = null)
-//     {
-//         throw new NotImplementedException();
-//     }
-// }
+    private void ApplyProblemDetailsDefaults(
+    HttpContext httpContext,
+    ProblemDetails problemDetails,
+    int statusCode)
+    {
+        problemDetails.Status ??= statusCode;
+        if(_options.ClientErrorMapping.TryGetValue(statusCode, out var clientErrorData))
+        {
+            problemDetails.Title ??= clientErrorData.Title;
+            problemDetails.Type ??= clientErrorData.Link;
+        }
+        
+        var traceId = Activity.Current?.Id ?? httpContext?.TraceIdentifier;
+        if(traceId != null)
+        {
+            problemDetails.Extensions["traceId"] = traceId;
+        }
+
+        problemDetails.Extensions.Add("customeProperty","customeValue");
+    }
+
+    public override ValidationProblemDetails CreateValidationProblemDetails(HttpContext httpContext, ModelStateDictionary modelStateDictionary, int? statusCode = null, string? title = null, string? type = null, string? detail = null, string? instance = null)
+    {
+        throw new NotImplementedException();
+    }
+}

@@ -1,4 +1,5 @@
-using Helios.Api.Filters;
+using FluentResults;
+using Helios.Application.Common.Errors;
 using Helios.Application.Services.Authentication;
 using Helios.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -19,20 +20,38 @@ public class AuthenticationController: ControllerBase
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        var authResult = _authenticationService.Register(
+        Result<AuthenticationResult> registerResult = _authenticationService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password);
+            if(registerResult.IsSuccess)
+            {
+                return Ok(MapAuthResult(registerResult.Value));
+            }
+            var firstError = registerResult.Errors[0];
 
-        var response = new AuthenticationResponse(
+            if(firstError is DuplicateEmailError)
+            {
+                return Problem(statusCode: StatusCodes.Status409Conflict, detail: "Email already exsist."));
+            }
+
+            return Problem();
+        // return registerResult.Match(
+        //     authResult => Ok(MapAuthResult(authResult)),
+        //     error => Problem(statusCode: (int)error.StatusCode,title: error.ErrorMessage)
+        // );
+    }
+
+    private object? MapAuthResult(AuthenticationResult authResult)
+    {
+            return new AuthenticationResponse(
             authResult.User.Id,
             authResult.User.FirstName,
             authResult.User.LastName,
             authResult.User.Email,
             authResult.Token
         );
-        return Ok(response);
     }
 
     [HttpPost("login")]
