@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using ErrorOr;
+using Helios.Api.Common.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -56,8 +58,12 @@ public class HeliosProblemDetailsFactory : ProblemDetailsFactory
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
+        var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
 
-        problemDetails.Extensions.Add("customeProperty","customeValue");
+        if(errors is not null)
+        {
+            problemDetails.Extensions.Add("errorCodes", errors.Select(e=>e.Code));
+        }
     }
 
     public override ValidationProblemDetails CreateValidationProblemDetails(HttpContext httpContext, ModelStateDictionary modelStateDictionary, int? statusCode = null, string? title = null, string? type = null, string? detail = null, string? instance = null)
