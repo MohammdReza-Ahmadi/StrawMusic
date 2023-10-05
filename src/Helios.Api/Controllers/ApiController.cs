@@ -19,10 +19,10 @@ public class ApiController: ControllerBase
             return ValidationProblem(errors);
         }
 
-        if (errors.All(error => error.NumericType == 23))
-        {
-            return ValidationProblem(errors);
-        }
+        // if (errors.All(error => error.NumericType == 23))
+        // {
+        //     return ValidationProblem(errors);
+        // }
 
         HttpContext.Items[HttpContextItemKeys.Errors] = errors;
 
