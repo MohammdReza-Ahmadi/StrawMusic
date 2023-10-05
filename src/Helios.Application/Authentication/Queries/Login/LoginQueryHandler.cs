@@ -22,6 +22,9 @@ IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
     }
     public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
+        await Task.CompletedTask;
+
+
 if(_userRepsitory.GetUserByEmail(query.Email) is not User user)
        {
         // throw new Exception("User with given email already exists.");

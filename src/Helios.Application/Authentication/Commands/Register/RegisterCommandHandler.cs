@@ -22,6 +22,7 @@ IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
     }
     public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
+      await Task.CompletedTask;
         if(_userRepsitory.GetUserByEmail(command.Email) is not null)
         {
             //throw new Exception("User with given email already exists.");
