@@ -1,4 +1,3 @@
-using Helios.Application.Common;
 using Helios.Application.Common.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;

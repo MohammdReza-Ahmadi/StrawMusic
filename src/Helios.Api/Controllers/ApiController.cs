@@ -1,10 +1,13 @@
 using ErrorOr;
 using Helios.Api.Common.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Helios.Api.Controllers;
 [ApiController]
+[Authorize]
+
 public class ApiController: ControllerBase
 {
     protected IActionResult Problem(List<Error> errors)
@@ -18,11 +21,6 @@ public class ApiController: ControllerBase
         {
             return ValidationProblem(errors);
         }
-
-        // if (errors.All(error => error.NumericType == 23))
-        // {
-        //     return ValidationProblem(errors);
-        // }
 
         HttpContext.Items[HttpContextItemKeys.Errors] = errors;
 

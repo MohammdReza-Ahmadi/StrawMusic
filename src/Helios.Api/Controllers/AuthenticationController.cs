@@ -6,12 +6,14 @@ using Helios.Application.Authentication.Queries.Login;
 using Helios.Contracts.Authentication;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Helios.Api.Controller;
+namespace Helios.Api.Controllers;
 
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController: ApiController
 {
 
@@ -26,7 +28,6 @@ public class AuthenticationController: ApiController
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterRequest request)
     {
-        // var command = new RegisterCommand(request.FirstName,request.LastName,request.Email,request.Password);
         var command = _mapper.Map<RegisterCommand>(request);
 
          ErrorOr<AuthenticationResult> authResult = await _mediator.Send(command);
@@ -36,9 +37,9 @@ public class AuthenticationController: ApiController
     }
 
     [HttpPost("login")]
+    [AllowAnonymous]
     public async Task<IActionResult> Login(LoginRequest request)
     {
-        // var query = new LoginQuery(request.Email,request.Password);
         var query = _mapper.Map<LoginQuery>(request);
         var authResult = await _mediator.Send(query);
 
