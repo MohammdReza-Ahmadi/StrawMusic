@@ -11,4 +11,9 @@ public class MusicsController : ApiController
     {
         return Ok(Array.Empty<string>());
     }
+
+    [HttpPost]
+    public IActionResult UploadMusics(){
+        return Ok();
+    }
 }
