@@ -1,5 +1,3 @@
-using System.Net;
-
 namespace Helios.Application.Common.Errors;
 // public interface IError
 // {

@@ -1,4 +1,3 @@
-using System.Security.Permissions;
 using ErrorOr;
 
 namespace Helios.Domain.Common.Errors;

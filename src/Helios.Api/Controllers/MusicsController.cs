@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
+using Helios.Contracts.Music;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helios.Api.Controllers;
@@ -13,7 +13,8 @@ public class MusicsController : ApiController
     }
 
     [HttpPost]
-    public IActionResult UploadMusics(){
-        return Ok();
+    public IActionResult UploadMusic(UploadMusicRequest request)
+    {
+        return Ok(request);
     }
 }

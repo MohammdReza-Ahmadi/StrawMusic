@@ -1,8 +1,5 @@
 using System.Reflection;
-using ErrorOr;
 using FluentValidation;
-using Helios.Application.Authentication.Commands.Register;
-using Helios.Application.Authentication.Common;
 using Helios.Application.Common.Behaviors;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;

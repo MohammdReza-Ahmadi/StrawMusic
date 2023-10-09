@@ -1,5 +1,4 @@
 using ErrorOr;
-using Helios.Api.Controllers;
 using Helios.Application.Authentication.Commands.Register;
 using Helios.Application.Authentication.Common;
 using Helios.Application.Authentication.Queries.Login;
