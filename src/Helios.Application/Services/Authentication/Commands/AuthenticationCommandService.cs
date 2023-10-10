@@ -20,8 +20,6 @@ public class AuthenticationCommandService : IAuthenticationCommandService
     {
         if(_userRepsitory.GetUserByEmail(email) is not null)
         {
-            //throw new Exception("User with given email already exists.");
-            // return Result.Fail<AuthenticationResult>(new[] {new DuplicateEmailError() });
             return Errors.User.DuplicateEmail;
         }
 

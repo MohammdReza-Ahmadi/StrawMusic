@@ -1,11 +1,11 @@
 using ErrorOr;
-using Helios.Domain.Entities;
+using Helios.Application.Services.Music.Commons;
 
 namespace Helios.Application.Services.Music.Commands;
 
 public interface IMusicCommandService
 {
-    ErrorOr<UploadMusic> UploadMusic(
+    ErrorOr<MusicResult> UploadMusic(
     string title,
     string additionalTags,
     int rate,
