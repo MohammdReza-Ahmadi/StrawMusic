@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Helios.Api.Controllers;
 
-[Route("[controller]")]
+[Route("musics")]
 public class MusicsController : ApiController
 {
     private readonly ISender _mediator;
@@ -25,7 +25,7 @@ public class MusicsController : ApiController
         return Ok(Array.Empty<string>());
     }
 
-    [HttpPost]
+    [HttpPost("upload")]
     public async Task<IActionResult> UploadMusic(UploadMusicRequest request)
     {
         var query = _mapper.Map<UploadCommand>(request);
