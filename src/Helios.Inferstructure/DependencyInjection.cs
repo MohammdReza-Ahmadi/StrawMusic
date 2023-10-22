@@ -37,6 +37,8 @@ public static class DependencyInjection
 
         services.AddSingleton(Options.Create(JwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
+        services.AddSingleton<IMusicRepository, MusicRepository>();
+
 
         services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters

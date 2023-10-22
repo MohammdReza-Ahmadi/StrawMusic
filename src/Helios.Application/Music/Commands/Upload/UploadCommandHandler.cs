@@ -9,6 +9,10 @@ namespace Helios.Application.Music.Command.Upload;
 public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<MusicResult>>
 {
     private readonly IMusicRepository _musicRepository;
+    public UploadCommandHandler(IMusicRepository musicRepository)
+    {
+        _musicRepository = musicRepository;
+    }
     public async Task<ErrorOr<MusicResult>> Handle(
         UploadCommand request,
         CancellationToken cancellationToken)
