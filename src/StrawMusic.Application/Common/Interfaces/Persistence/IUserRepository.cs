@@ -1,9 +1,9 @@
-using Helios.Domain.User;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Application.Common.Interfaces.Persistence;
+namespace StrawMusic.Application.Common.Interfaces.Persistence;
 
 public interface IUserRepsitory
 {
-    User? GetUserByEmail(string email);
-    void AddUser(User user);
+    UserEntity? GetUserByEmail(string email);
+    void AddUser(UserEntity user);
 }

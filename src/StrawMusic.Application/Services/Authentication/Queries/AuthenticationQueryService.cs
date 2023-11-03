@@ -1,10 +1,10 @@
 using ErrorOr;
-using Helios.Application.Common.Interfaces.Authentication;
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Domain.Common.Errors;
-using Helios.Domain.User;
+using StrawMusic.Application.Common.Interfaces.Authentication;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Domain.Common.Errors;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Application.Services.Authentication;
+namespace StrawMusic.Application.Services.Authentication;
 
 public class AuthenticationQueryService : IAuthenticationQueryService
 {
@@ -17,7 +17,7 @@ public class AuthenticationQueryService : IAuthenticationQueryService
     }
     public ErrorOr<AuthenticationResult> Login(string email, string password)
     {
-       if(_userRepsitory.GetUserByEmail(email) is not User user)
+       if(_userRepsitory.GetUserByEmail(email) is not UserEntity user)
        {
         // throw new Exception("User with given email already exists.");
         return Errors.Authentication.InvalidCredentials;

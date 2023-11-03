@@ -1,6 +1,11 @@
-﻿namespace Helios.Application.Music.Queries
+﻿using FluentValidation;
+
+namespace StrawMusic.Application.Music.Queries;
+public class MusicQueryValidator : AbstractValidator<MusicQuery>
 {
-    public class MusicQueryValidator
+    public MusicQueryValidator()
     {
+        RuleFor(x => x.id).NotEmpty();
     }
 }
+

@@ -1,7 +1,7 @@
 using System.Net;
-using Helios.Application.Common.Errors;
+using StrawMusic.Application.Common.Errors;
 
-namespace Helios.Application.Common;
+namespace StrawMusic.Application.Common;
 public class DuplicateEmailException : Exception, IServiceException
 {
     public HttpStatusCode StatusCode => HttpStatusCode.Conflict;

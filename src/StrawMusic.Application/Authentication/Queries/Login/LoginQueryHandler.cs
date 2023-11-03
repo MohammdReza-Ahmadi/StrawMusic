@@ -1,11 +1,11 @@
 using ErrorOr;
-using Helios.Application.Authentication.Common;
-using Helios.Application.Common.Interfaces.Authentication;
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Domain.User;
+using StrawMusic.Application.Authentication.Common;
+using StrawMusic.Application.Common.Interfaces.Authentication;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Domain.UserEntity;
 using MediatR;
 
-namespace Helios.Application.Authentication.Queries.Login;
+namespace StrawMusic.Application.Authentication.Queries.Login;
 
 public class LoginQueryHandler : 
 IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
@@ -25,7 +25,7 @@ IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
         await Task.CompletedTask;
 
 
-if(_userRepsitory.GetUserByEmail(query.Email) is not User user)
+if(_userRepsitory.GetUserByEmail(query.Email) is not UserEntity user)
        {
         // throw new Exception("User with given email already exists.");
         return Domain.Common.Errors.Errors.Authentication.InvalidCredentials;

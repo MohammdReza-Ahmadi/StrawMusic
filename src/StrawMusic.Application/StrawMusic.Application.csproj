@@ -1,6 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Remove="Services\Music\Queries - Copy\**" />
+    <EmbeddedResource Remove="Services\Music\Queries - Copy\**" />
+    <None Remove="Services\Music\Queries - Copy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="fluentResults" Version="3.15.2" />
     <PackageReference Include="FluentValidation" Version="11.7.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />

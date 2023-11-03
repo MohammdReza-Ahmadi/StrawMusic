@@ -1,6 +1,6 @@
-using Helios.Application.Common.Interfaces.Services;
+using StrawMusic.Application.Common.Interfaces.Services;
 
-namespace Helios.Infrastructure.Services;
+namespace StrawMusic.Infrastructure.Services;
 public class DateTimeProvider : IDateTimeProvider
 {
     public DateTime UtcNow => DateTime.UtcNow;

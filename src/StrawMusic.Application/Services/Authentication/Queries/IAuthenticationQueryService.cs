@@ -1,6 +1,6 @@
 using ErrorOr;
 
-namespace Helios.Application.Services.Authentication;
+namespace StrawMusic.Application.Services.Authentication;
 
 public interface IAuthenticationQueryService
 {

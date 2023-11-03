@@ -1,7 +1,7 @@
 using ErrorOr;
-using Helios.Application.Services.Music.Commons;
+using StrawMusic.Application.Services.Music.Commons;
 
-namespace Helios.Application.Services.Music.Commands;
+namespace StrawMusic.Application.Services.Music.Commands;
 
 public interface IMusicCommandService
 {

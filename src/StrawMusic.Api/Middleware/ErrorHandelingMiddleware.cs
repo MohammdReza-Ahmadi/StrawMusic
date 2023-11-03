@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace Helios.Api.Middleware;
+namespace StrawMusic.Api.Middleware;
 
 public class ErrorHandelingMiddleware
 {

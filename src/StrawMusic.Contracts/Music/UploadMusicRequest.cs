@@ -1,4 +1,4 @@
-namespace Helios.Contracts.Music;
+namespace StrawMusic.Contracts.Music;
 
 public record UploadMusicRequest(
 string Title,

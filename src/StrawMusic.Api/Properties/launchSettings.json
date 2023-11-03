@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Helios.Api": {
+    "StrawMusic.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

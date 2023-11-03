@@ -1,12 +1,13 @@
-using Helios.Application.Music;
-using Helios.Contracts.Music;
+using StrawMusic.Application.Music;
+using StrawMusic.Contracts.Music;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using StrawMusic.Application.Music.Queries;
 
-namespace Helios.Api.Controllers;
+namespace StrawMusic.Api.Controllers;
 
-[Route("musics")]
+[Route("music")]
 public class MusicsController : ApiController
 {
     private readonly ISender _mediator;
@@ -34,10 +35,9 @@ public class MusicsController : ApiController
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetMusicById(GetMusicRequest request)
+    public async Task<IActionResult> GetMusicById(GetMusicRequest id)
     {
-        var query = _mapper.Map<UploadCommand>(request);
-        var uploadMusic = await _mediator.Send(query);
-        return Ok(uploadMusic);
+        var query = _mapper.Map<MusicQuery>(id);
+        return Ok(await _mediator.Send(query));
     }
 }

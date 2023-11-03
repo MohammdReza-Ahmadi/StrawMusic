@@ -1,11 +1,11 @@
 using System.Reflection;
 using FluentValidation;
-using Helios.Application.Common.Behaviors;
+using StrawMusic.Application.Common.Behaviors;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace Helios.Application;
+namespace StrawMusic.Application;
 
 public static class DependencyInjection
 {

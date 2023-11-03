@@ -1,6 +1,6 @@
-namespace Helios.Domain.Entities;
+namespace StrawMusic.Domain.Entities;
 
-public class Music
+public class MusicEntity
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Title { get; set; } = null!;

@@ -2,7 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Helios.Api.Filters;
+namespace StrawMusic.Api.Filters;
 
 public class ErrorHandelingFilterAttribute: ExceptionFilterAttribute
 {

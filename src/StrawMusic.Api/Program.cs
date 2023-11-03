@@ -1,6 +1,6 @@
-using Helios.Api;
-using Helios.Application;
-using Helios.Infrastructure;
+using StrawMusic.Api;
+using StrawMusic.Application;
+using StrawMusic.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 {
 builder.Services

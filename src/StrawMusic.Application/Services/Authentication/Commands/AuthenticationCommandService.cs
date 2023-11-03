@@ -1,10 +1,10 @@
 using ErrorOr;
-using Helios.Application.Common.Interfaces.Authentication;
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Domain.Common.Errors;
-using Helios.Domain.User;
+using StrawMusic.Application.Common.Interfaces.Authentication;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Domain.Common.Errors;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Application.Services.Authentication;
+namespace StrawMusic.Application.Services.Authentication;
 
 public class AuthenticationCommandService : IAuthenticationCommandService
 {
@@ -23,7 +23,7 @@ public class AuthenticationCommandService : IAuthenticationCommandService
             return Errors.User.DuplicateEmail;
         }
 
-      var user = new User{
+      var user = new UserEntity{
         FirstName = firstName,
         LastName = lastName,
         Email = email,

@@ -1,8 +1,8 @@
-using Helios.Domain.User;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Application.Services.Authentication;
+namespace StrawMusic.Application.Services.Authentication;
 
 public record AuthenticationResult(
-    User User,
+    UserEntity User,
     string Token
 );

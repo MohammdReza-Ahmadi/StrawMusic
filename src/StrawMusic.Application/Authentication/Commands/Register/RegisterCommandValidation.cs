@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Helios.Application.Authentication.Commands.Register;
+namespace StrawMusic.Application.Authentication.Commands.Register;
 
 public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
 {

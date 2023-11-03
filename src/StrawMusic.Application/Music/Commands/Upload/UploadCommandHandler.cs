@@ -1,10 +1,10 @@
 using ErrorOr;
-using Helios.Application.Common.Interfaces.Persistence.MusicRepository;
-using Helios.Application.Services.Music.Commons;
-using Helios.Domain.Entities;
+using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
+using StrawMusic.Application.Services.Music.Commons;
+using StrawMusic.Domain.Entities;
 using MediatR;
 
-namespace Helios.Application.Music.Command.Upload;
+namespace StrawMusic.Application.Music.Command.Upload;
 
 public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<MusicResult>>
 {
@@ -18,7 +18,7 @@ public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<Music
         CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        var music = new Domain.Entities.Music{
+        var music = new MusicEntity{
             Title = request.Title,
             Permalink = request.Permalink,
             AdditionalTags = request.AdditionalTags,

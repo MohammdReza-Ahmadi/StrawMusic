@@ -1,8 +1,9 @@
-using Helios.Domain.Entities;
+using StrawMusic.Domain.Entities;
 
-namespace Helios.Application.Common.Interfaces.Persistence.MusicRepository;
+namespace StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
 
 public interface IMusicRepository
 {
-    void AddMusic(Domain.Entities.Music uploadMusic);
+    void AddMusic(MusicEntity uploadMusic);
+    MusicEntity? GetMusic(Guid? id);
 }

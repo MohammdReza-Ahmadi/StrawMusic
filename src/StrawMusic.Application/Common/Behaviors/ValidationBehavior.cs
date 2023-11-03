@@ -2,7 +2,7 @@ using ErrorOr;
 using FluentValidation;
 using MediatR;
 
-namespace Helios.Application.Common.Behaviors;
+namespace StrawMusic.Application.Common.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> : 
 IPipelineBehavior<TRequest, TResponse>

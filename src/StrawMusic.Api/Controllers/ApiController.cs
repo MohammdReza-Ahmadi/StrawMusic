@@ -1,10 +1,10 @@
 using ErrorOr;
-using Helios.Api.Common.Http;
+using StrawMusic.Api.Common.Http;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Helios.Api.Controllers;
+namespace StrawMusic.Api.Controllers;
 [ApiController]
 [Authorize]
 

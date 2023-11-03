@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace Helios.Application.Common.Errors
+namespace StrawMusic.Application.Common.Errors
 {
     public interface IServiceException
     {

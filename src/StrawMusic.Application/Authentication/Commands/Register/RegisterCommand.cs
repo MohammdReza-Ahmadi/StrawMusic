@@ -1,8 +1,8 @@
 using ErrorOr;
-using Helios.Application.Authentication.Common;
+using StrawMusic.Application.Authentication.Common;
 using MediatR;
 
-namespace Helios.Application.Authentication.Commands.Register;
+namespace StrawMusic.Application.Authentication.Commands.Register;
 
 public record RegisterCommand(
     string FirstName,

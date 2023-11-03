@@ -1,15 +1,14 @@
 ﻿using ErrorOr;
-using Helios.Application.Authentication.Queries.Login;
-using Helios.Application.Services.Music.Commons;
+using StrawMusic.Application.Authentication.Queries.Login;
+using StrawMusic.Application.Services.Music.Commons;
 using MediatR;
 
-namespace Helios.Application.Music.Queries
+namespace StrawMusic.Application.Music.Queries;
+public class MusicQueryHandler : IRequestHandler<MusicQuery, ErrorOr<MusicResult>>
 {
-    public class MusicQueryHandler : IRequestHandler<MusicQuery, ErrorOr<MusicResult>>
+    public Task<ErrorOr<MusicResult>> Handle(MusicQuery request, CancellationToken cancellationToken)
     {
-        public Task<ErrorOr<MusicResult>> Handle(MusicQuery request, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
     }
 }
+

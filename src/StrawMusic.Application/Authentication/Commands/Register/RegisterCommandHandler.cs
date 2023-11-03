@@ -1,11 +1,11 @@
 using ErrorOr;
-using Helios.Application.Authentication.Common;
-using Helios.Application.Common.Interfaces.Authentication;
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Domain.User;
+using StrawMusic.Application.Authentication.Common;
+using StrawMusic.Application.Common.Interfaces.Authentication;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Domain.UserEntity;
 using MediatR;
 
-namespace Helios.Application.Authentication.Commands.Register;
+namespace StrawMusic.Application.Authentication.Commands.Register;
 
 public class RegisterCommandHandler : 
 IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
@@ -30,7 +30,7 @@ IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
             return Domain.Common.Errors.Errors.User.DuplicateEmail;
         }
 
-      var user = new User{
+      var user = new UserEntity{
         FirstName = command.FirstName,
         LastName = command.LastName,
         Email = command.Email,

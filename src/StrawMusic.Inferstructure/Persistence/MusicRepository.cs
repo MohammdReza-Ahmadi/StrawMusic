@@ -1,12 +1,16 @@
-using Helios.Application.Common.Interfaces.Persistence.MusicRepository;
-using Helios.Domain.Entities;
+using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
+using StrawMusic.Domain.Entities;
 
-namespace Helios.Infrastructure.Persistence;
+namespace StrawMusic.Infrastructure.Persistence;
 public class MusicRepository : IMusicRepository
 {
-    private static readonly List<Music> _uploadMusic = new ();
-    public void AddMusic(Music uploadMusic)
+    private static readonly List<MusicEntity> _uploadMusic = new ();
+    public void AddMusic(MusicEntity uploadMusic)
     {
         _uploadMusic.Add(uploadMusic);
+    }
+    public MusicEntity? GetMusic(Guid? id)
+    {
+       return _uploadMusic.SingleOrDefault(x => x.Id == id);
     }
 }

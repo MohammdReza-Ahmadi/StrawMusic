@@ -1,8 +1,8 @@
-using Helios.Domain.Entities;
+using StrawMusic.Domain.Entities;
 
-namespace Helios.Application.Services.Music.Commons;
+namespace StrawMusic.Application.Services.Music.Commons;
 
 public record MusicResult
 (
-    Domain.Entities.Music upload
+    MusicEntity Music
 );

@@ -1,17 +1,17 @@
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Domain.User;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Infrastructure.Persistence;
+namespace StrawMusic.Infrastructure.Persistence;
 
 public class UserRepository : IUserRepsitory
 {
-    private static readonly List<User> _user = new ();
-    public void AddUser(User user)
+    private static readonly List<UserEntity> _user = new ();
+    public void AddUser(UserEntity user)
     {
         _user.Add(user);
     }
 
-    public User? GetUserByEmail(string email)
+    public UserEntity? GetUserByEmail(string email)
     {
        return _user.SingleOrDefault(e=>e.Email == email);
     }

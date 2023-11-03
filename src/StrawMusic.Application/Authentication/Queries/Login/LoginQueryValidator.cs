@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Helios.Application.Authentication.Queries.Login;
+namespace StrawMusic.Application.Authentication.Queries.Login;
 
 public class LoginQueryValidator : AbstractValidator<LoginQuery>
 {

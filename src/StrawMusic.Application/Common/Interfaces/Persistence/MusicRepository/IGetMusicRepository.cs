@@ -1,7 +1,9 @@
-﻿namespace Helios.Application.Common.Interfaces.Persistence.MusicRepository
+﻿using StrawMusic.Domain.Entities;
+
+namespace StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository
 {
     public interface IGetMusicRepository
     {
-        void GetMusic(string id);
+        MusicEntity GetMusic(string id);
     }
 }

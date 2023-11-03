@@ -1,8 +1,8 @@
-using Helios.Application.Common.Errors;
+using StrawMusic.Application.Common.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Helios.Api.Controllers;
+namespace StrawMusic.Api.Controllers;
 
 public class ErrorsController : ControllerBase
 {

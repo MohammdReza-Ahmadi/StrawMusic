@@ -1,18 +1,18 @@
 using System.Text;
-using Helios.Application.Common.Interfaces.Authentication;
-using Helios.Application.Common.Interfaces.Persistence;
-using Helios.Application.Common.Interfaces.Persistence.MusicRepository;
-using Helios.Application.Common.Interfaces.Services;
-using Helios.Infrastructure.Authentication;
-using Helios.Infrastructure.Persistence;
-using Helios.Infrastructure.Services;
+using StrawMusic.Application.Common.Interfaces.Authentication;
+using StrawMusic.Application.Common.Interfaces.Persistence;
+using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
+using StrawMusic.Application.Common.Interfaces.Services;
+using StrawMusic.Infrastructure.Authentication;
+using StrawMusic.Infrastructure.Persistence;
+using StrawMusic.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Helios.Infrastructure;
+namespace StrawMusic.Infrastructure;
 
 public static class DependencyInjection
 {

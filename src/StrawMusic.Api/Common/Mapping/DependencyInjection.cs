@@ -2,7 +2,7 @@ using System.Reflection;
 using Mapster;
 using MapsterMapper;
 
-namespace Helios.Api.Common.Mapping;
+namespace StrawMusic.Api.Common.Mapping;
 
 public static class DependencyInjection
 {

@@ -1,6 +1,6 @@
 using FluentResults;
 
-namespace Helios.Application.Common.Errors;
+namespace StrawMusic.Application.Common.Errors;
 public class DuplicateEmailError : IError
 {
     public List<IError> Reasons => throw new NotImplementedException();

@@ -1,4 +1,4 @@
-namespace Helios.Application.Common.Interfaces.Services;
+namespace StrawMusic.Application.Common.Interfaces.Services;
 
 public interface IDateTimeProvider
 {

@@ -1,4 +1,4 @@
-namespace Helios.Infrastructure.Authentication;
+namespace StrawMusic.Infrastructure.Authentication;
 public class JwtSettings
 {
     public const string SectionName = "JwtSettings";

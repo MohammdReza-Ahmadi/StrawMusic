@@ -1,10 +1,10 @@
-using Helios.Application.Authentication.Commands.Register;
-using Helios.Application.Authentication.Common;
-using Helios.Application.Authentication.Queries.Login;
-using Helios.Contracts.Authentication;
+using StrawMusic.Application.Authentication.Commands.Register;
+using StrawMusic.Application.Authentication.Common;
+using StrawMusic.Application.Authentication.Queries.Login;
+using StrawMusic.Contracts.Authentication;
 using Mapster;
 
-namespace Helios.Api.Common.Mapping;
+namespace StrawMusic.Api.Common.Mapping;
 
 public class AuthenticationMsppingConfig : IRegister
 {

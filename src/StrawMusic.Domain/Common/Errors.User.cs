@@ -1,6 +1,6 @@
 using ErrorOr;
 
-namespace Helios.Domain.Common.Errors;
+namespace StrawMusic.Domain.Common.Errors;
 
 public static partial class Errors
 {

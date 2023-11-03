@@ -1,8 +1,8 @@
 using ErrorOr;
-using Helios.Application.Services.Music.Commons;
+using StrawMusic.Application.Services.Music.Commons;
 using MediatR;
 
-namespace Helios.Application.Music;
+namespace StrawMusic.Application.Music;
 
 public record UploadCommand(
      string Title,

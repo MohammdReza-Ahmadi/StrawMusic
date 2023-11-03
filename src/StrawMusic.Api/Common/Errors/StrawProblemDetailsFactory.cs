@@ -1,18 +1,18 @@
 using System.Diagnostics;
 using ErrorOr;
-using Helios.Api.Common.Http;
+using StrawMusic.Api.Common.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace Helios.Api.Common.Errors;
+namespace StrawMusic.Api.Common.Errors;
 
-public class HeliosProblemDetailsFactory : ProblemDetailsFactory
+public class StrawMusicProblemDetailsFactory : ProblemDetailsFactory
 {
     private readonly ApiBehaviorOptions _options;
 
-    public HeliosProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
+    public StrawMusicProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
     {
         _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
     }

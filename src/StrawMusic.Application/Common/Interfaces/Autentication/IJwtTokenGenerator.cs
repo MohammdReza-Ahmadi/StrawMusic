@@ -1,8 +1,8 @@
-using Helios.Domain.User;
+using StrawMusic.Domain.UserEntity;
 
-namespace Helios.Application.Common.Interfaces.Authentication;
+namespace StrawMusic.Application.Common.Interfaces.Authentication;
 
 public interface IJwtTokenGenerator
 {
-    string GeneratorToken(User user);
+    string GeneratorToken(UserEntity user);
 }
