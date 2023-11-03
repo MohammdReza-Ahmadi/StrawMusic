@@ -19,6 +19,7 @@ public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<Music
     {
         await Task.CompletedTask;
         var music = new MusicEntity{
+            Id = Guid.NewGuid(),
             Title = request.Title,
             Permalink = request.Permalink,
             AdditionalTags = request.AdditionalTags,
@@ -28,6 +29,7 @@ public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<Music
             Rate = request.Rate
         };
         _musicRepository.AddMusic(music);
+        Console.WriteLine($"{music.Id}");
 
         return new MusicResult(music);
     }
