@@ -4,5 +4,5 @@ namespace StrawMusic.Application.Services.Music.Commons;
 
 public record MusicResult
 (
-    MusicEntity Music
+    MusicEntity? Music
 );

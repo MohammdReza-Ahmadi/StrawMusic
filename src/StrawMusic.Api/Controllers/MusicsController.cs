@@ -7,7 +7,7 @@ using StrawMusic.Application.Music.Queries;
 
 namespace StrawMusic.Api.Controllers;
 
-[Route("music")]
+[Route("musics")]
 public class MusicsController : ApiController
 {
     private readonly ISender _mediator;

@@ -1,4 +1,4 @@
 ﻿namespace StrawMusic.Contracts.Music
 {
-    public record GetMusicRequest(long id);
+    public record GetMusicRequest(Guid id);
 }
