@@ -2,6 +2,6 @@
 {
     public interface IGetMusicRepository
     {
-        //public Music GetMusic(string id);
+        void GetMusic(string id);
     }
 }
