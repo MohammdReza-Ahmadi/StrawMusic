@@ -2,7 +2,7 @@ namespace StrawMusic.Domain.Entities;
 
 public class MusicEntity
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid Id { get; set; }
     public string Title { get; set; } = null!;
     public string AdditionalTags { get; set; } = null!;
     public int Rate { get; set; }

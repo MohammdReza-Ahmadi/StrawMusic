@@ -7,7 +7,7 @@ using StrawMusic.Application.Music.Queries;
 
 namespace StrawMusic.Api.Controllers;
 
-[Route("musics")]
+[Route("[controller]/[action]")]
 public class MusicsController : ApiController
 {
     private readonly ISender _mediator;
@@ -26,7 +26,7 @@ public class MusicsController : ApiController
         return Ok(Array.Empty<string>());
     }
 
-    [HttpPost("upload")]
+    [HttpPost]
     public async Task<IActionResult> UploadMusic(UploadMusicRequest request)
     {
         var query = _mapper.Map<UploadCommand>(request);
@@ -34,10 +34,10 @@ public class MusicsController : ApiController
         return Ok(uploadMusic);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet]
     public async Task<IActionResult> GetMusicById(GetMusicRequest id)
     {
-        var query = _mapper.Map<MusicQuery>(id);
+        var query = new MusicQuery(id.id);
         return Ok(await _mediator.Send(query));
     }
 }
