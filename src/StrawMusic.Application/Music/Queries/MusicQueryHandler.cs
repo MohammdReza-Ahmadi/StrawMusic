@@ -1,5 +1,4 @@
 ﻿using ErrorOr;
-using StrawMusic.Application.Authentication.Queries.Login;
 using StrawMusic.Application.Services.Music.Commons;
 using MediatR;
 using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
