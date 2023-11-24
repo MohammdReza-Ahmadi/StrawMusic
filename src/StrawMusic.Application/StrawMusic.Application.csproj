@@ -1,22 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <Compile Remove="Services\Music\Queries - Copy\**" />
-    <EmbeddedResource Remove="Services\Music\Queries - Copy\**" />
-    <None Remove="Services\Music\Queries - Copy\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="fluentResults" Version="3.15.2" />
     <PackageReference Include="FluentValidation" Version="11.7.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Music\Common\" />
   </ItemGroup>
 
   <ItemGroup>

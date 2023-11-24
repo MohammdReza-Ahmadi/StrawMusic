@@ -1,12 +1,10 @@
 using ErrorOr;
 using StrawMusic.Api.Common.Http;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace StrawMusic.Api.Controllers;
 [ApiController]
-[Authorize]
 
 public class ApiController: ControllerBase
 {

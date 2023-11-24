@@ -1,22 +1,34 @@
-using StrawMusic.Application.Music;
-using StrawMusic.Contracts.Music;
 using MapsterMapper;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using StrawMusic.Application.Music.Queries;
+using StrawMusic.Application.Music.AddMusics;
+using StrawMusic.Application.Music.DeleteMusics;
+using StrawMusic.Application.Music.GetMusics;
+using StrawMusic.Application.Music.UpdateMusics;
+using StrawMusic.Application.ModelDto.AddMusics;
 
 namespace StrawMusic.Api.Controllers;
 
 [Route("[controller]/[action]")]
 public class MusicsController : ApiController
 {
-    private readonly ISender _mediator;
     private readonly IMapper _mapper;
+    private readonly IUploadMusic _uploadMusic;
+    private readonly IDeleteMusic _deleteMusic;
+    private readonly IGetMusicsService _getMusicsService;
+    private readonly IUpdateMusics _updateMusics;
 
-    public MusicsController(ISender mediator, IMapper mapper)
+    public MusicsController(
+        IMapper mapper,
+        IUploadMusic uploadMusic = null,
+        IDeleteMusic deleteMusic = null,
+        IGetMusicsService getMusicsService = null,
+        IUpdateMusics updateMusics = null)
     {
-        _mediator = mediator;
         _mapper = mapper;
+        _uploadMusic = uploadMusic;
+        _deleteMusic = deleteMusic;
+        _getMusicsService = getMusicsService;
+        _updateMusics = updateMusics;
     }
 
 
@@ -27,17 +39,28 @@ public class MusicsController : ApiController
     }
 
     [HttpPost]
-    public async Task<IActionResult> UploadMusic(UploadMusicRequest request)
+    public async Task<IActionResult> UploadMusic(MusicDto request)
     {
-        var query = _mapper.Map<UploadCommand>(request);
-        var uploadMusic = await _mediator.Send(query);
+        var uploadMusic = await _uploadMusic.AddMusic(request);
+        return Ok(uploadMusic);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateMusic(MusicDto request)
+    {
+        var uploadMusic = await _updateMusics.UpdateMusic(request);
         return Ok(uploadMusic);
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetMusicById(GetMusicRequest id)
+    public async Task<IActionResult> GetMusic(long id)
     {
-        var query = new MusicQuery(id.id);
-        return Ok(await _mediator.Send(query));
+        return Ok(await _getMusicsService.GetMusicById(id));
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> DeleteMusic(long id)
+    {
+        return Ok(await _deleteMusic.DeleteMusicById(id));
     }
 }

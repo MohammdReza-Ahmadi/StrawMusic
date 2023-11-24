@@ -5,5 +5,7 @@ namespace StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
 public interface IMusicRepository
 {
     void AddMusic(MusicEntity uploadMusic);
-    MusicEntity? GetMusic(Guid? id);
+    void updateMusic(MusicEntity uploadMusic);
+    MusicEntity? GetMusic(long? id);
+    public bool DeleteMusic(long id);
 }

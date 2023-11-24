@@ -1,25 +1,25 @@
 using ErrorOr;
-using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
-using StrawMusic.Application.Services.Music.Commons;
 using StrawMusic.Domain.Entities;
-using MediatR;
+using StrawMusic.Application.ModelDto.AddMusics;
+using StrawMusic.Application.Common.Interfaces.Persistence.MusicRepository;
+using StrawMusic.Application.Services;
 
-namespace StrawMusic.Application.Music.Command.Upload;
+namespace StrawMusic.Application.Music.AddMusics;
 
-public class UploadCommandHandler : IRequestHandler<UploadCommand, ErrorOr<MusicResult>>
+public class UploadMusic: IUploadMusic
 {
     private readonly IMusicRepository _musicRepository;
-    public UploadCommandHandler(IMusicRepository musicRepository)
+    public UploadMusic(IMusicRepository musicRepository)
     {
         _musicRepository = musicRepository;
     }
-    public async Task<ErrorOr<MusicResult>> Handle(
-        UploadCommand request,
-        CancellationToken cancellationToken)
+    public async Task<ErrorOr<MusicResult>> AddMusic(
+        MusicDto request)
     {
         await Task.CompletedTask;
-        var music = new MusicEntity{
-            Id = Guid.NewGuid(),
+        var music = new MusicEntity
+        {
+            Id = request.Id,
             Title = request.Title,
             Permalink = request.Permalink,
             AdditionalTags = request.AdditionalTags,

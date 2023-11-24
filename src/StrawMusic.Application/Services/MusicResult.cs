@@ -1,6 +1,6 @@
 using StrawMusic.Domain.Entities;
 
-namespace StrawMusic.Application.Services.Music.Commons;
+namespace StrawMusic.Application.Services;
 
 public record MusicResult
 (
